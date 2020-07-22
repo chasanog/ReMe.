@@ -1,0 +1,827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A8D2A191712E21EE2E150E3 /* Pods_ReMiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E0E039EB1A4A57EFF800A1 /* Pods_ReMiTests.framework */; };
+		5326210324B6786C007F591B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5326210224B6786C007F591B /* SplashView.swift */; };
+		5326210524B67E20007F591B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5326210424B67E20007F591B /* Assets.xcassets */; };
+		5327677A24B34F7E003CE520 /* Remi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327677924B34F7E003CE520 /* Remi.swift */; };
+		5327677F24B393D9003CE520 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327677E24B393D9003CE520 /* DetailView.swift */; };
+		5332213C24C8D26D0024854F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5332213B24C8D26D0024854F /* .gitignore */; };
+		53D3F94B24B3D69900687506 /* RemiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3F94A24B3D69900687506 /* RemiRepository.swift */; };
+		53FB958E24B3BF160048F056 /* RemiCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB958D24B3BF160048F056 /* RemiCellViewModel.swift */; };
+		53FB959024B3C05A0048F056 /* RemiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB958F24B3C05A0048F056 /* RemiListViewModel.swift */; };
+		53FB959224B3D26B0048F056 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53FB959124B3D26B0048F056 /* GoogleService-Info.plist */; };
+		53FEEEAE24B33BB4005FE17B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FEEEAD24B33BB4005FE17B /* AppDelegate.swift */; };
+		53FEEEB024B33BB4005FE17B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FEEEAF24B33BB4005FE17B /* SceneDelegate.swift */; };
+		53FEEEB224B33BB4005FE17B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FEEEB124B33BB4005FE17B /* ContentView.swift */; };
+		53FEEEB724B33BB8005FE17B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FEEEB624B33BB8005FE17B /* Preview Assets.xcassets */; };
+		53FEEEBA24B33BB8005FE17B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FEEEB824B33BB8005FE17B /* LaunchScreen.storyboard */; };
+		53FEEEC524B33BB8005FE17B /* ReMiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FEEEC424B33BB8005FE17B /* ReMiTests.swift */; };
+		53FEEED024B33BB8005FE17B /* ReMiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FEEECF24B33BB8005FE17B /* ReMiUITests.swift */; };
+		61ACC19721DC8AA9E00B730A /* Pods_ReMi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96AD0BCF4C8C9A7092E8A045 /* Pods_ReMi.framework */; };
+		AD9FFA7A01E092FD2FB4C9BF /* Pods_ReMi_ReMiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B8E1C9050A6B9DEC5A675E /* Pods_ReMi_ReMiUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53FEEEC124B33BB8005FE17B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53FEEEA224B33BB4005FE17B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53FEEEA924B33BB4005FE17B;
+			remoteInfo = ReMi;
+		};
+		53FEEECC24B33BB8005FE17B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53FEEEA224B33BB4005FE17B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53FEEEA924B33BB4005FE17B;
+			remoteInfo = ReMi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		296E7E38C1C38AB009702470 /* Pods-ReMiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMiTests.debug.xcconfig"; path = "Target Support Files/Pods-ReMiTests/Pods-ReMiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E237992973DEF5296EFFAFA /* Pods-ReMi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMi.release.xcconfig"; path = "Target Support Files/Pods-ReMi/Pods-ReMi.release.xcconfig"; sourceTree = "<group>"; };
+		4487664BBE888FD2DACB0DA2 /* Pods-ReMiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMiTests.release.xcconfig"; path = "Target Support Files/Pods-ReMiTests/Pods-ReMiTests.release.xcconfig"; sourceTree = "<group>"; };
+		5326210224B6786C007F591B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		5326210424B67E20007F591B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5327677924B34F7E003CE520 /* Remi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remi.swift; sourceTree = "<group>"; };
+		5327677E24B393D9003CE520 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5332213B24C8D26D0024854F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		53D3F94A24B3D69900687506 /* RemiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiRepository.swift; sourceTree = "<group>"; };
+		53E6F70E24B630FF005EB4D1 /* ReMe..entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReMe..entitlements; sourceTree = "<group>"; };
+		53FB958D24B3BF160048F056 /* RemiCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiCellViewModel.swift; sourceTree = "<group>"; };
+		53FB958F24B3C05A0048F056 /* RemiListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiListViewModel.swift; sourceTree = "<group>"; };
+		53FB959124B3D26B0048F056 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		53FEEEAA24B33BB4005FE17B /* ReMe..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReMe..app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FEEEAD24B33BB4005FE17B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53FEEEAF24B33BB4005FE17B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		53FEEEB124B33BB4005FE17B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		53FEEEB624B33BB8005FE17B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		53FEEEB924B33BB8005FE17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53FEEEBB24B33BB8005FE17B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53FEEEC024B33BB8005FE17B /* ReMiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReMiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FEEEC424B33BB8005FE17B /* ReMiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReMiTests.swift; sourceTree = "<group>"; };
+		53FEEEC624B33BB8005FE17B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53FEEECB24B33BB8005FE17B /* ReMiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReMiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FEEECF24B33BB8005FE17B /* ReMiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReMiUITests.swift; sourceTree = "<group>"; };
+		53FEEED124B33BB8005FE17B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82B8E1C9050A6B9DEC5A675E /* Pods_ReMi_ReMiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReMi_ReMiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E0E039EB1A4A57EFF800A1 /* Pods_ReMiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReMiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AD0BCF4C8C9A7092E8A045 /* Pods_ReMi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReMi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4B751D566A05727580AECD /* Pods-ReMi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMi.debug.xcconfig"; path = "Target Support Files/Pods-ReMi/Pods-ReMi.debug.xcconfig"; sourceTree = "<group>"; };
+		EE056DC4C26700D5E4390091 /* Pods-ReMi-ReMiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMi-ReMiUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReMi-ReMiUITests/Pods-ReMi-ReMiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FECE8EBD5D98965AF5449782 /* Pods-ReMi-ReMiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMi-ReMiUITests.release.xcconfig"; path = "Target Support Files/Pods-ReMi-ReMiUITests/Pods-ReMi-ReMiUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53FEEEA724B33BB4005FE17B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61ACC19721DC8AA9E00B730A /* Pods_ReMi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53FEEEBD24B33BB8005FE17B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A8D2A191712E21EE2E150E3 /* Pods_ReMiTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53FEEEC824B33BB8005FE17B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD9FFA7A01E092FD2FB4C9BF /* Pods_ReMi_ReMiUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F372DD4B8A3D3ADC08EF190 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE4B751D566A05727580AECD /* Pods-ReMi.debug.xcconfig */,
+				2E237992973DEF5296EFFAFA /* Pods-ReMi.release.xcconfig */,
+				EE056DC4C26700D5E4390091 /* Pods-ReMi-ReMiUITests.debug.xcconfig */,
+				FECE8EBD5D98965AF5449782 /* Pods-ReMi-ReMiUITests.release.xcconfig */,
+				296E7E38C1C38AB009702470 /* Pods-ReMiTests.debug.xcconfig */,
+				4487664BBE888FD2DACB0DA2 /* Pods-ReMiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2110A7EC8201988903ACCF33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96AD0BCF4C8C9A7092E8A045 /* Pods_ReMi.framework */,
+				82B8E1C9050A6B9DEC5A675E /* Pods_ReMi_ReMiUITests.framework */,
+				86E0E039EB1A4A57EFF800A1 /* Pods_ReMiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5327677824B34F6C003CE520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5327677924B34F7E003CE520 /* Remi.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5327677D24B393C6003CE520 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5327677E24B393D9003CE520 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53D3F94924B3D68A00687506 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				53D3F94A24B3D69900687506 /* RemiRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		53FB958C24B3BF050048F056 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				53FB958D24B3BF160048F056 /* RemiCellViewModel.swift */,
+				53FB958F24B3C05A0048F056 /* RemiListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		53FEEEA124B33BB4005FE17B = {
+			isa = PBXGroup;
+			children = (
+				5332213B24C8D26D0024854F /* .gitignore */,
+				53FEEEAC24B33BB4005FE17B /* ReMi */,
+				53FEEEC324B33BB8005FE17B /* ReMiTests */,
+				53FEEECE24B33BB8005FE17B /* ReMiUITests */,
+				53FEEEAB24B33BB4005FE17B /* Products */,
+				1F372DD4B8A3D3ADC08EF190 /* Pods */,
+				2110A7EC8201988903ACCF33 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		53FEEEAB24B33BB4005FE17B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53FEEEAA24B33BB4005FE17B /* ReMe..app */,
+				53FEEEC024B33BB8005FE17B /* ReMiTests.xctest */,
+				53FEEECB24B33BB8005FE17B /* ReMiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53FEEEAC24B33BB4005FE17B /* ReMi */ = {
+			isa = PBXGroup;
+			children = (
+				53E6F70E24B630FF005EB4D1 /* ReMe..entitlements */,
+				53D3F94924B3D68A00687506 /* Repositories */,
+				53FB958C24B3BF050048F056 /* ViewModels */,
+				5327677D24B393C6003CE520 /* Views */,
+				5327677824B34F6C003CE520 /* Model */,
+				53FEEEAD24B33BB4005FE17B /* AppDelegate.swift */,
+				53FEEEAF24B33BB4005FE17B /* SceneDelegate.swift */,
+				53FEEEB124B33BB4005FE17B /* ContentView.swift */,
+				53FEEEB824B33BB8005FE17B /* LaunchScreen.storyboard */,
+				5326210424B67E20007F591B /* Assets.xcassets */,
+				53FEEEBB24B33BB8005FE17B /* Info.plist */,
+				53FB959124B3D26B0048F056 /* GoogleService-Info.plist */,
+				53FEEEB524B33BB8005FE17B /* Preview Content */,
+				5326210224B6786C007F591B /* SplashView.swift */,
+			);
+			path = ReMi;
+			sourceTree = "<group>";
+		};
+		53FEEEB524B33BB8005FE17B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				53FEEEB624B33BB8005FE17B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		53FEEEC324B33BB8005FE17B /* ReMiTests */ = {
+			isa = PBXGroup;
+			children = (
+				53FEEEC424B33BB8005FE17B /* ReMiTests.swift */,
+				53FEEEC624B33BB8005FE17B /* Info.plist */,
+			);
+			path = ReMiTests;
+			sourceTree = "<group>";
+		};
+		53FEEECE24B33BB8005FE17B /* ReMiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				53FEEECF24B33BB8005FE17B /* ReMiUITests.swift */,
+				53FEEED124B33BB8005FE17B /* Info.plist */,
+			);
+			path = ReMiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53FEEEA924B33BB4005FE17B /* ReMi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53FEEED424B33BB8005FE17B /* Build configuration list for PBXNativeTarget "ReMi" */;
+			buildPhases = (
+				1B25B497EF5DD78B4560BAE8 /* [CP] Check Pods Manifest.lock */,
+				53FEEEA624B33BB4005FE17B /* Sources */,
+				53FEEEA724B33BB4005FE17B /* Frameworks */,
+				53FEEEA824B33BB4005FE17B /* Resources */,
+				80B5A5DFC8A4367298522AE7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReMi;
+			productName = ReMi;
+			productReference = 53FEEEAA24B33BB4005FE17B /* ReMe..app */;
+			productType = "com.apple.product-type.application";
+		};
+		53FEEEBF24B33BB8005FE17B /* ReMiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53FEEED724B33BB8005FE17B /* Build configuration list for PBXNativeTarget "ReMiTests" */;
+			buildPhases = (
+				9D1134201DCD8A4ECDC660FF /* [CP] Check Pods Manifest.lock */,
+				53FEEEBC24B33BB8005FE17B /* Sources */,
+				53FEEEBD24B33BB8005FE17B /* Frameworks */,
+				53FEEEBE24B33BB8005FE17B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53FEEEC224B33BB8005FE17B /* PBXTargetDependency */,
+			);
+			name = ReMiTests;
+			productName = ReMiTests;
+			productReference = 53FEEEC024B33BB8005FE17B /* ReMiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		53FEEECA24B33BB8005FE17B /* ReMiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53FEEEDA24B33BB8005FE17B /* Build configuration list for PBXNativeTarget "ReMiUITests" */;
+			buildPhases = (
+				6ACDB03B902FFABA5A68DA45 /* [CP] Check Pods Manifest.lock */,
+				53FEEEC724B33BB8005FE17B /* Sources */,
+				53FEEEC824B33BB8005FE17B /* Frameworks */,
+				53FEEEC924B33BB8005FE17B /* Resources */,
+				0A9F2C983FC18BF60788541E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53FEEECD24B33BB8005FE17B /* PBXTargetDependency */,
+			);
+			name = ReMiUITests;
+			productName = ReMiUITests;
+			productReference = 53FEEECB24B33BB8005FE17B /* ReMiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53FEEEA224B33BB4005FE17B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Cihan Hasanoglu";
+				TargetAttributes = {
+					53FEEEA924B33BB4005FE17B = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					53FEEEBF24B33BB8005FE17B = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 53FEEEA924B33BB4005FE17B;
+					};
+					53FEEECA24B33BB8005FE17B = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 53FEEEA924B33BB4005FE17B;
+					};
+				};
+			};
+			buildConfigurationList = 53FEEEA524B33BB4005FE17B /* Build configuration list for PBXProject "ReMi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53FEEEA124B33BB4005FE17B;
+			productRefGroup = 53FEEEAB24B33BB4005FE17B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53FEEEA924B33BB4005FE17B /* ReMi */,
+				53FEEEBF24B33BB8005FE17B /* ReMiTests */,
+				53FEEECA24B33BB8005FE17B /* ReMiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53FEEEA824B33BB4005FE17B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5332213C24C8D26D0024854F /* .gitignore in Resources */,
+				53FEEEBA24B33BB8005FE17B /* LaunchScreen.storyboard in Resources */,
+				53FB959224B3D26B0048F056 /* GoogleService-Info.plist in Resources */,
+				5326210524B67E20007F591B /* Assets.xcassets in Resources */,
+				53FEEEB724B33BB8005FE17B /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53FEEEBE24B33BB8005FE17B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53FEEEC924B33BB8005FE17B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A9F2C983FC18BF60788541E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReMi-ReMiUITests/Pods-ReMi-ReMiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReMi-ReMiUITests/Pods-ReMi-ReMiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReMi-ReMiUITests/Pods-ReMi-ReMiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B25B497EF5DD78B4560BAE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReMi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ACDB03B902FFABA5A68DA45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReMi-ReMiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80B5A5DFC8A4367298522AE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReMi/Pods-ReMi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReMi/Pods-ReMi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReMi/Pods-ReMi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D1134201DCD8A4ECDC660FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReMiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53FEEEA624B33BB4005FE17B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FEEEAE24B33BB4005FE17B /* AppDelegate.swift in Sources */,
+				53FB958E24B3BF160048F056 /* RemiCellViewModel.swift in Sources */,
+				53FB959024B3C05A0048F056 /* RemiListViewModel.swift in Sources */,
+				53FEEEB024B33BB4005FE17B /* SceneDelegate.swift in Sources */,
+				53D3F94B24B3D69900687506 /* RemiRepository.swift in Sources */,
+				5327677A24B34F7E003CE520 /* Remi.swift in Sources */,
+				5327677F24B393D9003CE520 /* DetailView.swift in Sources */,
+				53FEEEB224B33BB4005FE17B /* ContentView.swift in Sources */,
+				5326210324B6786C007F591B /* SplashView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53FEEEBC24B33BB8005FE17B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FEEEC524B33BB8005FE17B /* ReMiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53FEEEC724B33BB8005FE17B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FEEED024B33BB8005FE17B /* ReMiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53FEEEC224B33BB8005FE17B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53FEEEA924B33BB4005FE17B /* ReMi */;
+			targetProxy = 53FEEEC124B33BB8005FE17B /* PBXContainerItemProxy */;
+		};
+		53FEEECD24B33BB8005FE17B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53FEEEA924B33BB4005FE17B /* ReMi */;
+			targetProxy = 53FEEECC24B33BB8005FE17B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53FEEEB824B33BB8005FE17B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53FEEEB924B33BB8005FE17B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53FEEED224B33BB8005FE17B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		53FEEED324B33BB8005FE17B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53FEEED524B33BB8005FE17B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE4B751D566A05727580AECD /* Pods-ReMi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReMi/ReMe..entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_ASSET_PATHS = "\"ReMi/Preview Content\"";
+				DEVELOPMENT_TEAM = 32GL9FBSV9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ReMi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CSHDev.ReMi;
+				PRODUCT_NAME = ReMe.;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		53FEEED624B33BB8005FE17B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E237992973DEF5296EFFAFA /* Pods-ReMi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReMi/ReMe..entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_ASSET_PATHS = "\"ReMi/Preview Content\"";
+				DEVELOPMENT_TEAM = 32GL9FBSV9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ReMi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CSHDev.ReMi;
+				PRODUCT_NAME = ReMe.;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		53FEEED824B33BB8005FE17B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 296E7E38C1C38AB009702470 /* Pods-ReMiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32GL9FBSV9;
+				INFOPLIST_FILE = ReMiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CSHDev.ReMiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReMi.app/ReMi";
+			};
+			name = Debug;
+		};
+		53FEEED924B33BB8005FE17B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4487664BBE888FD2DACB0DA2 /* Pods-ReMiTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32GL9FBSV9;
+				INFOPLIST_FILE = ReMiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CSHDev.ReMiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReMi.app/ReMi";
+			};
+			name = Release;
+		};
+		53FEEEDB24B33BB8005FE17B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE056DC4C26700D5E4390091 /* Pods-ReMi-ReMiUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32GL9FBSV9;
+				INFOPLIST_FILE = ReMiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CSHDev.ReMiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReMi;
+			};
+			name = Debug;
+		};
+		53FEEEDC24B33BB8005FE17B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FECE8EBD5D98965AF5449782 /* Pods-ReMi-ReMiUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32GL9FBSV9;
+				INFOPLIST_FILE = ReMiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CSHDev.ReMiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReMi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53FEEEA524B33BB4005FE17B /* Build configuration list for PBXProject "ReMi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FEEED224B33BB8005FE17B /* Debug */,
+				53FEEED324B33BB8005FE17B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53FEEED424B33BB8005FE17B /* Build configuration list for PBXNativeTarget "ReMi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FEEED524B33BB8005FE17B /* Debug */,
+				53FEEED624B33BB8005FE17B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53FEEED724B33BB8005FE17B /* Build configuration list for PBXNativeTarget "ReMiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FEEED824B33BB8005FE17B /* Debug */,
+				53FEEED924B33BB8005FE17B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53FEEEDA24B33BB8005FE17B /* Build configuration list for PBXNativeTarget "ReMiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FEEEDB24B33BB8005FE17B /* Debug */,
+				53FEEEDC24B33BB8005FE17B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53FEEEA224B33BB4005FE17B /* Project object */;
+}

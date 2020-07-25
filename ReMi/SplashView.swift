@@ -14,7 +14,7 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if self.isActive {
-                ContentView(remiCellVM: RemiCellViewModel(remi: Remi(remiDescription: "", count: 0)))
+                ContentView(remiCellVM: RemiCellViewModel(remi: Remi(remiDescription: "", count: 0)), addButtonColor: .gray)
             } else {
                 Image("splashScreen")
                     .renderingMode(.original)

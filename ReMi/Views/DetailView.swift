@@ -24,16 +24,25 @@ struct DetailView: View {
                                 //                            .frame(width: geometry.size.width, height: geometry.size.height * 0.3)
                                 .opacity(0.8)
                             RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
-                            Text(self.remiCellVM.remi.remiDescription)
-                                .bold()
+                            VStack {
+                                TextField(self.remiCellVM.remi.remiDescription, text: self.$remiCellVM.remi.remiDescription)
+                                .font(Font.headline.weight(.bold))
+                                .font(.system(size:28))
+//                                .bold()
                                 .multilineTextAlignment(.center)
                                 .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.25)
                                 //                                    .
+//                                .foregroundColor(.black)
+//                                .font(.system(size: 28))
+                                Text("To edit Phrase tap the phrase and change it.")
+                                .font(.footnote)
                                 .foregroundColor(.black)
-                                .font(.system(size: 28))
+                                    .padding(.all)
+                                    .opacity(0.6)
+                            }
                         }.frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.3)
                             .padding(.top, geometry.size.height * 0.05)
-                        
+
                         Text(String(self.remiCellVM.remi.count))
                             .bold()
                             .frame(width: geometry.size.width, height: 70)
@@ -146,11 +155,11 @@ struct DetailView: View {
             )
             
         }
-        .navigationBarItems(trailing:
-            Button(action: {}) {
-                Text("Edit")
-            }
-        )
+//        .navigationBarItems(trailing:
+//            Button(action: {}) {
+//                Text("Edit")
+//            }
+//        )
             .accentColor(.black)
         
     }

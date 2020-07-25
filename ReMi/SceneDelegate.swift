@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView(remiCellVM: RemiCellViewModel(remi: Remi(remiDescription: "", count: 0)))
+        let contentView = ContentView(remiCellVM: RemiCellViewModel(remi: Remi(remiDescription: "", count: 0)), addButtonColor: .gray)
 
         // Use a UIHostingController as window root view controller.
         // iOS 12 and lower support

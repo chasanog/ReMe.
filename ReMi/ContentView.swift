@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     
@@ -17,6 +18,10 @@ struct ContentView: View {
     
     @State var presentAddNewItem = false
     @State var presentInfoModal = false
+    @State var addButtonColor: Color
+    @State var presentInfo = false
+    let email = "cihan.hasanoglu@icloud.com"
+    @State private var keyboardHeight: CGFloat = 0
     //    let topColor = UIColor(red: 121/255.0, green: 179/255.0, blue: 238/255.0, alpha: 1.0)
     //    let bottomColor = UIColor(red: 255/255, green: 184/255, blue: 18/255, alpha: 1.0)
     //    private var gradientLayer = CAGradientLayer()
@@ -56,6 +61,71 @@ struct ContentView: View {
                             //            }
                             .navigationBarTitle("ReMe")
                         
+                        Button(action: {self.presentInfo.toggle()}) {
+                            VStack(alignment: .trailing) {
+                                Image(systemName: "info.circle")
+                                    
+                            }.sheet(isPresented: self.$presentInfo) {
+                                ZStack {
+                                    LinearGradient(gradient: Gradient(colors: [Color(hex: "FFB812"), Color(hex: "79B3EE")]), startPoint: .bottom, endPoint: .top)
+                                    .edgesIgnoringSafeArea(.all)
+//                                    Spacer()
+                                    VStack(alignment: .leading) {
+                                        
+//                                        Spacer(minLength: 5)
+//                                        .frame(height: UIScreen.main.bounds.height * 0.95)
+                                        VStack(alignment: .center) {
+                                            Text("ReMe.")
+                                            .bold()
+                                                .font(.largeTitle)
+                                                .padding(.all)
+                                                .padding(.top, geometry.size.height * 0.05 )
+                                                
+                                            Text("This App is made by CSHDev to support people for remembering and rehearsing phrases!")
+                                                .padding(.all)
+                                            Text("For queries and feedback:")
+                                                .padding(.all)
+                                            
+                                            Button(self.email) {
+                                                if let url = URL(string: "mailto:\(self.email)") {
+                                                    if #available(iOS 10.0, *) {
+                                                        UIApplication.shared.open(url)
+                                                    } else {
+                                                        UIApplication.shared.openURL(url)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        Spacer()
+                                        VStack(alignment: .center) {
+                                            Button(action: {
+                                                self.presentInfo = false
+                                            }) {
+                                                Text("Dismiss")
+                                                    .bold()
+                                                    .font(.title)
+                                                    .foregroundColor(.black)
+//                                                    .padding(.top, UIScreen.main.bounds.height * 0.025)
+//                                                    .padding(.leading, UIScreen.main.bounds.width * 0.5)
+//                                                    .padding(.all)
+                                                    .padding(.leading, geometry.size.width * 0.3)
+                                                
+                                            }
+                                        }
+//                                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.5)
+//                                        .padding(.horizontal, UIScreen.main.bounds.width)
+                                        
+                                    }
+//                                    .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.5)
+                                    
+//                                    )
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                        
                         
                         //                        )
                     }.edgesIgnoringSafeArea(.bottom)
@@ -79,12 +149,13 @@ struct ContentView: View {
                                                 Button(action: {
                                                     self.presentAddNewItem = false
                                                     self.remiListVM.loadData()
+                                                    self.remiCellVM.remi.remiDescription = ""
                                                 }) {
                                                     Text("Dismiss")
                                                         .bold()
                                                         .foregroundColor(.black)
                                                         .padding(.top)
-                                                        .padding(.leading, UIScreen.main.bounds.width * 0.75)
+                                                        .padding(.leading, UIScreen.main.bounds.width * 0.70)
                                                     
                                                 }
                                             }
@@ -106,6 +177,7 @@ struct ContentView: View {
                                                 
                                                 
                                                 
+                                                
                                             )
                                                 
                                                 .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.1)
@@ -115,18 +187,27 @@ struct ContentView: View {
                                                 self.remiCellVM.remi.remiDescription = ""
                                                 self.presentAddNewItem = false
                                                 self.remiListVM.loadData()
-                                                
+                                              
                                             }) {
                                                 Text("Add")
                                                     .bold()
                                                     .foregroundColor(.black)
                                                     .font(.title)
-                                                
+                                            
                                             }
+                                            .disabled(self.remiCellVM.remi.remiDescription.isEmpty)
+                                            .opacity(self.remiCellVM.remi.remiDescription.isEmpty ? 0.2 : 1.0)
                                             Spacer()
                                         }
+                                        .padding()
+                                        .padding(.bottom, self.keyboardHeight)
+                                        .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0}.animation(.easeInOut(duration: 0.3))
+//                                        .onReceive(self.keyboardHeight = $0)
                                 )
                             }
+//                            .padding(.bottom, keyboardHeight)
+//                            .onReceive(keyboardHeight) {self.keyboardHeight = $0}
+                            //Keyboard offset
                             
                         }
                     }.onDisappear(perform: self.remiListVM.loadData)
@@ -141,7 +222,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(remiCellVM: RemiCellViewModel(remi: Remi(remiDescription: "Test ReMe", count: 0)))
+        ContentView(remiCellVM: RemiCellViewModel(remi: Remi(remiDescription: "Test ReMe", count: 0)), addButtonColor: .gray)
     }
 }
 
@@ -204,6 +285,26 @@ struct RemiCell: View {
         //                        }
         //                )
         //        }
+    }
+}
+extension Publishers {
+    // 1.
+    static var keyboardHeight: AnyPublisher<CGFloat, Never> {
+        // 2.
+        let willShow = NotificationCenter.default.publisher(for: UIApplication.keyboardWillShowNotification)
+            .map { $0.keyboardHeight }
+        
+        let willHide = NotificationCenter.default.publisher(for: UIApplication.keyboardWillHideNotification)
+            .map { _ in CGFloat(0) }
+        
+        // 3.
+        return MergeMany(willShow, willHide)
+            .eraseToAnyPublisher()
+    }
+}
+extension Notification {
+    var keyboardHeight: CGFloat {
+        return (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.height ?? 0
     }
 }
 

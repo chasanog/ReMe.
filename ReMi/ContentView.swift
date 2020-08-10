@@ -20,7 +20,7 @@ struct ContentView: View {
     @State var presentInfoModal = false
     @State var addButtonColor: Color
     @State var presentInfo = false
-    let email = "cihan.hasanoglu@icloud.com"
+    let email = "cshdev.team@gmail.com"
     @State private var keyboardHeight: CGFloat = 0
     //    let topColor = UIColor(red: 121/255.0, green: 179/255.0, blue: 238/255.0, alpha: 1.0)
     //    let bottomColor = UIColor(red: 255/255, green: 184/255, blue: 18/255, alpha: 1.0)
@@ -59,18 +59,23 @@ struct ContentView: View {
                         .edgesIgnoringSafeArea(.all)
                         .environment(\.defaultMinListRowHeight, 100)
                             //            }
-                            .navigationBarTitle("ReMe")
+                            .navigationBarTitle("ReMe.").foregroundColor(.black)
                         
                         Button(action: {self.presentInfo.toggle()}) {
                             VStack(alignment: .trailing) {
                                 Image(systemName: "info.circle")
+                                    .renderingMode(.original)
+//                                .resizable()
+                                    .font(.system(size: 24))
+                                    .padding(.all)
+                                
                                     
                             }.sheet(isPresented: self.$presentInfo) {
                                 ZStack {
                                     LinearGradient(gradient: Gradient(colors: [Color(hex: "FFB812"), Color(hex: "79B3EE")]), startPoint: .bottom, endPoint: .top)
                                     .edgesIgnoringSafeArea(.all)
 //                                    Spacer()
-                                    VStack(alignment: .leading) {
+                                    VStack(alignment: .center) {
                                         
 //                                        Spacer(minLength: 5)
 //                                        .frame(height: UIScreen.main.bounds.height * 0.95)
@@ -80,11 +85,14 @@ struct ContentView: View {
                                                 .font(.largeTitle)
                                                 .padding(.all)
                                                 .padding(.top, geometry.size.height * 0.05 )
+                                                .foregroundColor(.black)
                                                 
-                                            Text("This App is made by CSHDev to support people for remembering and rehearsing phrases!")
+                                            Text("info_text".localized)
                                                 .padding(.all)
-                                            Text("For queries and feedback:")
+                                                .foregroundColor(.black)
+                                            Text("info_text_feedback".localized)
                                                 .padding(.all)
+                                                .foregroundColor(.black)
                                             
                                             Button(self.email) {
                                                 if let url = URL(string: "mailto:\(self.email)") {
@@ -101,18 +109,21 @@ struct ContentView: View {
                                             Button(action: {
                                                 self.presentInfo = false
                                             }) {
-                                                Text("Dismiss")
+                                                Text("label_dismiss".localized)
                                                     .bold()
                                                     .font(.title)
                                                     .foregroundColor(.black)
 //                                                    .padding(.top, UIScreen.main.bounds.height * 0.025)
-//                                                    .padding(.leading, UIScreen.main.bounds.width * 0.5)
+//                                                    .padding(.leading, 0)
+                                                    .frame(width: 150, height:50, alignment: .center)
+                                                    .padding(.all)
 //                                                    .padding(.all)
-                                                    .padding(.leading, geometry.size.width * 0.3)
+//                                                    .padding(.leading, geometry.size.width * 0.3)
+                                                
                                                 
                                             }
                                         }
-//                                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.5)
+                                        .frame(width: 150, height: 50, alignment: .center)
 //                                        .padding(.horizontal, UIScreen.main.bounds.width)
                                         
                                     }
@@ -139,7 +150,7 @@ struct ContentView: View {
                     HStack {
                         Button(action: {self.presentAddNewItem.toggle()}) {
                             HStack(alignment: .center){
-                                Text("New").bold().font(.title).foregroundColor(.black)
+                                Text("label_new".localized).bold().font(.title).foregroundColor(.black)
                             }.sheet(isPresented: self.$presentAddNewItem) {
                                 LinearGradient(gradient: Gradient(colors: [Color(hex: "FFB812"), Color(hex: "79B3EE")]), startPoint: .bottom, endPoint: .top)
                                     .edgesIgnoringSafeArea(.all)
@@ -151,7 +162,7 @@ struct ContentView: View {
                                                     self.remiListVM.loadData()
                                                     self.remiCellVM.remi.remiDescription = ""
                                                 }) {
-                                                    Text("Dismiss")
+                                                    Text("label_dismiss".localized)
                                                         .bold()
                                                         .foregroundColor(.black)
                                                         .padding(.top)
@@ -167,7 +178,7 @@ struct ContentView: View {
                                                 //                                                            RadialGradient(gradient: Gradient(colors: [.white, .blue]), center: .center, startRadius: 1, endRadius: 150)
                                             ).overlay(
                                                 ZStack {
-                                                    TextField("Enter your Phrase here", text: self.$remiCellVM.remi.remiDescription, onCommit: {
+                                                    TextField("label_placeholder".localized, text: self.$remiCellVM.remi.remiDescription, onCommit: {
                                                         self.onCommit(self.remiCellVM.remi)
                                                     }).padding()
                                                     
@@ -189,7 +200,7 @@ struct ContentView: View {
                                                 self.remiListVM.loadData()
                                               
                                             }) {
-                                                Text("Add")
+                                                Text("label_add".localized)
                                                     .bold()
                                                     .foregroundColor(.black)
                                                     .font(.title)
@@ -305,6 +316,12 @@ extension Publishers {
 extension Notification {
     var keyboardHeight: CGFloat {
         return (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.height ?? 0
+    }
+}
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
     }
 }
 

@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  ReMi
+
+  Created by Cihan Hasanoglu on 03.08.20.
+  Copyright © 2020 Cihan Hasanoglu. All rights reserved.
+*/
+
+"label_new" = "Neu";
+"label_dismiss" = "Schließen";
+"label_add" = "Fertig";
+"label_placeholder" = "Hier Text eingeben";
+"label_edit_hint" = "Zum bearbeiten einfach antippen";
+"info_text" = "Diese Anwendung wurde von CSHDev entwickelt um das Auswendiglernen zu unterstützen!";
+"info_text_feedback" = "Für Fragen und Feedback:";

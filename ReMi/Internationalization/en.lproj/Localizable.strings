@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  ReMi
+
+  Created by Cihan Hasanoglu on 03.08.20.
+  Copyright © 2020 Cihan Hasanoglu. All rights reserved.
+*/
+
+"label_new" = "New";
+"label_dismiss" = "Dismiss";
+"label_add" = "Add";
+"label_placeholder" = "Enter your Phrase here";
+"label_edit_hint" = "To edit phrase tap on it and change it";
+"info_text" = "This App is made by CSHDev to support people for remembering and rehearsing phrases!";
+"info_text_feedback" = "For queries and feedback:";

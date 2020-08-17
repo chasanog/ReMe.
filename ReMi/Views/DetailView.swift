@@ -17,7 +17,7 @@ struct DetailView: View {
             LinearGradient(gradient: Gradient(colors: [Color(hex: "FFB812"), Color(hex: "79B3EE")]), startPoint: .bottom, endPoint: .top)
                 .edgesIgnoringSafeArea(.all)
                 .overlay(
-                    VStack(spacing: 5) {
+                    VStack(spacing: 40) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15)
                                 .fill(Color(hex: "BF813C"))
@@ -25,6 +25,7 @@ struct DetailView: View {
                                 .opacity(0.8)
                             RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
                             VStack {
+                                
                                 TextField(self.remiCellVM.remi.remiDescription, text: self.$remiCellVM.remi.remiDescription)
                                 .font(Font.headline.weight(.bold))
                                 .font(.system(size:28))
@@ -42,13 +43,14 @@ struct DetailView: View {
                                     .opacity(0.6)
                             }
                         }.frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.3)
-                            .padding(.top, geometry.size.height * 0.05)
-
+                            .padding(.top, -55)
                         Text(String(self.remiCellVM.remi.count))
                             .bold()
                             .frame(width: geometry.size.width, height: 70)
                             .font(.system(size: 60))
                             .foregroundColor(.black)
+                            .padding(.bottom, -100)
+                            .padding(.top, -33)
                         Divider().accentColor(.gray).blur(radius: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
                         
                         VStack {

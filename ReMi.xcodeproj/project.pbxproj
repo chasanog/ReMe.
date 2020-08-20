@@ -60,6 +60,7 @@
 		53872A4324D8339300C8CD8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		53872A4524D8339F00C8CD8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		53872A4624D8339F00C8CD8C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		539A479424ED8B5A007EE1BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53D3F94A24B3D69900687506 /* RemiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiRepository.swift; sourceTree = "<group>"; };
 		53E6F70E24B630FF005EB4D1 /* ReMe..entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReMe..entitlements; sourceTree = "<group>"; };
 		53FB958D24B3BF160048F056 /* RemiCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiCellViewModel.swift; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 		53FEEEA124B33BB4005FE17B = {
 			isa = PBXGroup;
 			children = (
+				539A479424ED8B5A007EE1BF /* README.md */,
 				5332213B24C8D26D0024854F /* .gitignore */,
 				53FEEEAC24B33BB4005FE17B /* ReMi */,
 				53FEEEC324B33BB8005FE17B /* ReMiTests */,

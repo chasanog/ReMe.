@@ -60,7 +60,7 @@ struct ContentView: View {
                         .edgesIgnoringSafeArea(.all)
                         .environment(\.defaultMinListRowHeight, 100)
                             //            }
-                            .navigationBarTitle("ReMe.").foregroundColor(.black)
+                            .navigationBarTitle("ReMee").foregroundColor(.black)
                         
                         Button(action: {self.presentInfo.toggle()}) {
                             VStack(alignment: .trailing) {
@@ -81,7 +81,7 @@ struct ContentView: View {
 //                                        Spacer(minLength: 5)
 //                                        .frame(height: UIScreen.main.bounds.height * 0.95)
                                         VStack(alignment: .center) {
-                                            Text("ReMe.")
+                                            Text("ReMee")
                                             .bold()
                                                 .font(.largeTitle)
                                                 .padding(.all)

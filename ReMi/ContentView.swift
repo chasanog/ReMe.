@@ -176,13 +176,12 @@ struct ContentView: View {
                                             Spacer(minLength: 50)
                                             RoundedRectangle(cornerRadius: 15).fill(
                                                 Color(hex: "BF813C")
-                                                //                    LinearGradient(gradient: Gradient(colors: [.pink, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                                                //                                                            RadialGradient(gradient: Gradient(colors: [.white, .blue]), center: .center, startRadius: 1, endRadius: 150)
                                             ).overlay(
                                                 ZStack {
                                                     TextField("label_placeholder".localized, text: self.$remiCellVM.remi.remiDescription, onCommit: {
                                                         self.onCommit(self.remiCellVM.remi)
-                                                    }).padding()
+                                                    }).foregroundColor(.black)
+                                                    .padding()
                                                     
                                                     RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
                                                 }
@@ -213,15 +212,9 @@ struct ContentView: View {
                                             Spacer()
                                         }
                                         .padding()
-                                        .padding(.bottom, self.keyboardHeight)
                                         .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0}.animation(.easeInOut(duration: 0.3))
-//                                        .onReceive(self.keyboardHeight = $0)
                                 )
                             }
-//                            .padding(.bottom, keyboardHeight)
-//                            .onReceive(keyboardHeight) {self.keyboardHeight = $0}
-                            //Keyboard offset
-                            
                         }
                     }.onDisappear(perform: self.remiListVM.loadData)
                     

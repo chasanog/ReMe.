@@ -1,10 +1,10 @@
-#  ReMe. Privacy
+#  ReMee Privacy
 This application is provided by CSHDev Team at no cost and is intended for use as it is.
 
-If you choose to use this Service, you agree to the collection and use of information in relation to to this policy. The Information given in the app to use ReMe. is collected and stored anonymized and securely on a NoSQL Database. We will not use or share any information with anyone except as described in this policy.
+If you choose to use this Service, you agree to the collection and use of information in relation to to this policy. The Information given in the app to use ReMee is collected and stored anonymized and securely on a NoSQL Database. We will not use or share any information with anyone except as described in this policy.
 
 ## Information Collection and Use
-There is no personal information required to use ReMe. only the data written in each ReMe. will be stored anonymized and with high security. The data will be retained by us and used as described in this Privacy Policy.
+There is no personal information required to use ReMee only the data written in each ReMee will be stored anonymized and with high security. The data will be retained by us and used as described in this Privacy Policy.
 
 ## Log Data
 We want to inform you that whenever you use our Service, in case of an error in the app we collect data and information on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.

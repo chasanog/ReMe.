@@ -166,7 +166,8 @@ struct ContentView: View {
                                                         .bold()
                                                         .foregroundColor(.black)
                                                         .padding(.top)
-                                                        .padding(.leading, UIScreen.main.bounds.width * 0.70)
+                                                        .padding(.leading, UIScreen.main.bounds.width * 0.69)
+//                                                        .frame(width: 250, height: 250, alignment: .center)
                                                     
                                                 }
                                             }

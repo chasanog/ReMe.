@@ -25,12 +25,10 @@ struct DetailView: View {
                                 .opacity(0.8)
                             RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
                             VStack {
-                                
                                 TextField(self.remiCellVM.remi.remiDescription, text: self.$remiCellVM.remi.remiDescription)
                                 .font(Font.headline.weight(.bold))
                                 .font(.system(size:28))
-//                                .bold()
-                                    .foregroundColor(.black)
+                                .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
                                 .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.25)
                                 
@@ -58,18 +56,10 @@ struct DetailView: View {
                                     .frame(width: 170, height: 200, alignment: .leading)
                                     .padding(.trailing, 100.0)
                                     .opacity(self.opacity)
-                                    //                                    .padding(.top, 20)
                                     .onTapGesture {
                                         self.remiCellVM.remi.count = self.remiCellVM.remi.count + 1
                                         let impactMed = UIImpactFeedbackGenerator(style: .rigid)
                                         impactMed.impactOccurred()
-                                        //                                        withAnimation(.linear(duration: 0.1)) {
-                                        //                                            self.opacity = 0.5
-                                        //                                            withAnimation(.linear(duration: 0.1)) {
-                                        //                                                self.opacity = 1.0
-                                        //                                            }
-                                        //                                        }
-                                        //                    self.count = self.count + 1
                                 }
                                 .overlay(
                                     ZStack {
@@ -97,9 +87,17 @@ struct DetailView: View {
                                     .padding(.leading, 190)
                                     .padding(.top, -100)
                                     .onTapGesture {
-                                        self.remiCellVM.remi.count = self.remiCellVM.remi.count - 1
-                                        let impactMed = UIImpactFeedbackGenerator(style: .rigid)
-                                        impactMed.impactOccurred()
+                                        
+                                        if self.remiCellVM.remi.count != 0 {
+                                            self.remiCellVM.remi.count = self.remiCellVM.remi.count - 1
+                                            let impactMed = UIImpactFeedbackGenerator(style: .rigid)
+                                            impactMed.impactOccurred()
+                                        } else {
+                                            let impactMedWarning = UINotificationFeedbackGenerator()
+                                            impactMedWarning.notificationOccurred(.warning)
+                                        }
+                                        
+
                                 }
                                 .overlay(
                                     ZStack {

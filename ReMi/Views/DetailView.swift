@@ -33,9 +33,7 @@ struct DetailView: View {
                                     .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
                                 .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.25)
-                                //                                    .
-//                                .foregroundColor(.black)
-//                                .font(.system(size: 28))
+                                
                                 Text("label_edit_hint".localized)
                                 .font(.footnote)
                                 .foregroundColor(.black)

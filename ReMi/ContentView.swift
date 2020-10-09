@@ -42,6 +42,7 @@ struct ContentView: View {
                                 self.remiListVM.deleteRemi(at: index)
                                 
                             }
+                            .listRowBackground(Color.clear)
                         }
                         .onAppear{
                             self.remiListVM.loadData()
@@ -272,8 +273,6 @@ struct RemiCell: View {
                                 }
                             }
                         }
-                        
-                        
                 )
                     .opacity(0.8)
                 

@@ -22,7 +22,7 @@ class RemiListViewModel: ObservableObject {
             }
         }
         .assign(to: \.remiCellViewModels, on: self)
-    .store(in: &cancellables)
+        .store(in: &cancellables)
     }
     
     func addRemi(remi: Remi) {

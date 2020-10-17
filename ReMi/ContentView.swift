@@ -13,7 +13,6 @@ struct ContentView: View {
     
     @ObservedObject var remiListVM = RemiListViewModel()
     @ObservedObject var remiCellVM: RemiCellViewModel
-    //    @State var showModal: Bool = false
     var onCommit: (Remi) -> (Void) = {_ in}
     
     @State var presentAddNewItem = false
@@ -22,9 +21,6 @@ struct ContentView: View {
     @State var presentInfo = false
     let email = "cshdev.team@gmail.com"
     @State private var keyboardHeight: CGFloat = 0
-    //    let topColor = UIColor(red: 121/255.0, green: 179/255.0, blue: 238/255.0, alpha: 1.0)
-    //    let bottomColor = UIColor(red: 255/255, green: 184/255, blue: 18/255, alpha: 1.0)
-    //    private var gradientLayer = CAGradientLayer()
     
     var body: some View {
         GeometryReader { geometry in
@@ -59,35 +55,28 @@ struct ContentView: View {
                         }
                         .edgesIgnoringSafeArea(.all)
                         .environment(\.defaultMinListRowHeight, 100)
-                            //            }
-                            .navigationBarTitle("ReMee").foregroundColor(.black)
+                        //            }
+                        .navigationBarTitle("ReMee").foregroundColor(.black)
                         
                         Button(action: {self.presentInfo.toggle()}) {
                             VStack(alignment: .trailing) {
                                 Image(systemName: "info.circle")
                                     .renderingMode(.original)
-//                                .resizable()
                                     .font(.system(size: 24))
                                     .padding(.all)
-                                
-                                    
                             }.sheet(isPresented: self.$presentInfo) {
                                 ZStack {
                                     LinearGradient(gradient: Gradient(colors: [Color(hex: "FFB812"), Color(hex: "79B3EE")]), startPoint: .bottom, endPoint: .top)
-                                    .edgesIgnoringSafeArea(.all)
-//                                    Spacer()
+                                        .edgesIgnoringSafeArea(.all)
                                     VStack(alignment: .center) {
-                                        
-//                                        Spacer(minLength: 5)
-//                                        .frame(height: UIScreen.main.bounds.height * 0.95)
                                         VStack(alignment: .center) {
                                             Text("ReMee")
-                                            .bold()
+                                                .bold()
                                                 .font(.largeTitle)
                                                 .padding(.all)
                                                 .padding(.top, geometry.size.height * 0.05 )
                                                 .foregroundColor(.black)
-                                                
+                                            
                                             Text("info_text".localized)
                                                 .padding(.all)
                                                 .foregroundColor(.black)
@@ -114,112 +103,86 @@ struct ContentView: View {
                                                     .bold()
                                                     .font(.title)
                                                     .foregroundColor(.black)
-//                                                    .padding(.top, UIScreen.main.bounds.height * 0.025)
-//                                                    .padding(.leading, 0)
                                                     .frame(width: 150, height:50, alignment: .center)
-                                                    .padding(.all)
-//                                                    .padding(.all)
-//                                                    .padding(.leading, geometry.size.width * 0.3)
-                                                
-                                                
+                                                    .padding(.all)   
                                             }
                                         }
                                         .frame(width: 150, height: 50, alignment: .center)
-//                                        .padding(.horizontal, UIScreen.main.bounds.width)
-                                        
                                     }
-//                                    .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.5)
-                                    
-//                                    )
                                 }
                                 
                             }
-                            
                         }
-                        
-                        
-                        
-                        //                        )
                     }.edgesIgnoringSafeArea(.bottom)
-                        .frame(minWidth: geometry.size.width, idealWidth: geometry.size.width, maxWidth: geometry.size.width, minHeight: geometry.size.height * 0.85,  idealHeight: geometry.size.height * 0.85, maxHeight: geometry.size.height * 0.85, alignment: .center)
+                    .frame(minWidth: geometry.size.width, idealWidth: geometry.size.width, maxWidth: geometry.size.width, minHeight: geometry.size.height * 0.85,  idealHeight: geometry.size.height * 0.85, maxHeight: geometry.size.height * 0.85, alignment: .center)
                 }.onAppear{
                     UINavigationBarAppearance().backgroundColor = UIColor.clear
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 .accentColor(.black)
                 .navigationBarItems(trailing:
-                    HStack {
-                        Button(action: {self.presentAddNewItem.toggle()}) {
-                            HStack(alignment: .center){
-                                Text("label_new".localized).bold().font(.title).foregroundColor(.black)
-                            }.sheet(isPresented: self.$presentAddNewItem) {
-                                LinearGradient(gradient: Gradient(colors: [Color(hex: "FFB812"), Color(hex: "79B3EE")]), startPoint: .bottom, endPoint: .top)
-                                    .edgesIgnoringSafeArea(.all)
-                                    .overlay(
-                                        VStack {
-                                            VStack(alignment: .trailing) {
-                                                Button(action: {
-                                                    self.presentAddNewItem = false
-                                                    self.remiListVM.loadData()
-                                                    self.remiCellVM.remi.remiDescription = ""
-                                                }) {
-                                                    Text("label_dismiss".localized)
-                                                        .bold()
-                                                        .foregroundColor(.black)
-                                                        .padding(.top)
-                                                        .padding(.leading, UIScreen.main.bounds.width * 0.69)
-//                                                        .frame(width: 250, height: 250, alignment: .center)
-                                                    
+                                        HStack {
+                                            Button(action: {self.presentAddNewItem.toggle()}) {
+                                                HStack(alignment: .center){
+                                                    Text("label_new".localized).bold().font(.title).foregroundColor(.black)
+                                                }.sheet(isPresented: self.$presentAddNewItem) {
+                                                    LinearGradient(gradient: Gradient(colors: [Color(hex: "FFB812"), Color(hex: "79B3EE")]), startPoint: .bottom, endPoint: .top)
+                                                        .edgesIgnoringSafeArea(.all)
+                                                        .overlay(
+                                                            VStack {
+                                                                VStack(alignment: .trailing) {
+                                                                    Button(action: {
+                                                                        self.presentAddNewItem = false
+                                                                        self.remiListVM.loadData()
+                                                                        self.remiCellVM.remi.remiDescription = ""
+                                                                    }) {
+                                                                        Text("label_dismiss".localized)
+                                                                            .bold()
+                                                                            .foregroundColor(.black)
+                                                                            .padding(.top)
+                                                                            .padding(.leading, UIScreen.main.bounds.width * 0.69)
+                                                                    }
+                                                                }
+                                                                
+                                                                Spacer(minLength: 50)
+                                                                RoundedRectangle(cornerRadius: 15).fill(
+                                                                    Color(hex: "BF813C")
+                                                                ).overlay(
+                                                                    ZStack {
+                                                                        TextField("label_placeholder".localized, text: self.$remiCellVM.remi.remiDescription, onCommit: {
+                                                                            self.onCommit(self.remiCellVM.remi)
+                                                                        }).foregroundColor(.black)
+                                                                        .padding()
+                                                                        
+                                                                        RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
+                                                                    }
+                                                                    .opacity(0.8)
+                                                                )
+                                                                
+                                                                .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.1)
+                                                                .padding(.bottom, 50)
+                                                                Button(action: {
+                                                                    self.remiListVM.addRemi(remi: Remi(remiDescription: self.remiCellVM.remi.remiDescription, count: 0))
+                                                                    self.remiCellVM.remi.remiDescription = ""
+                                                                    self.presentAddNewItem = false
+                                                                    self.remiListVM.loadData()
+                                                                }) {
+                                                                    Text("label_add".localized)
+                                                                        .bold()
+                                                                        .foregroundColor(.black)
+                                                                        .font(.title)
+                                                                }
+                                                                .disabled(self.remiCellVM.remi.remiDescription.isEmpty)
+                                                                .opacity(self.remiCellVM.remi.remiDescription.isEmpty ? 0.2 : 1.0)
+                                                                Spacer()
+                                                            }
+                                                            .padding()
+                                                            .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0}.animation(.easeInOut(duration: 0.3))
+                                                        )
                                                 }
                                             }
-                                            
-                                            Spacer(minLength: 50)
-                                            RoundedRectangle(cornerRadius: 15).fill(
-                                                Color(hex: "BF813C")
-                                            ).overlay(
-                                                ZStack {
-                                                    TextField("label_placeholder".localized, text: self.$remiCellVM.remi.remiDescription, onCommit: {
-                                                        self.onCommit(self.remiCellVM.remi)
-                                                    }).foregroundColor(.black)
-                                                    .padding()
-                                                    
-                                                    RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
-                                                }
-                                                .opacity(0.8)
-                                                
-                                                
-                                                
-                                                
-                                            )
-                                                
-                                                .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.1)
-                                                .padding(.bottom, 50)
-                                            Button(action: {
-                                                self.remiListVM.addRemi(remi: Remi(remiDescription: self.remiCellVM.remi.remiDescription, count: 0))
-                                                self.remiCellVM.remi.remiDescription = ""
-                                                self.presentAddNewItem = false
-                                                self.remiListVM.loadData()
-                                              
-                                            }) {
-                                                Text("label_add".localized)
-                                                    .bold()
-                                                    .foregroundColor(.black)
-                                                    .font(.title)
-                                            
-                                            }
-                                            .disabled(self.remiCellVM.remi.remiDescription.isEmpty)
-                                            .opacity(self.remiCellVM.remi.remiDescription.isEmpty ? 0.2 : 1.0)
-                                            Spacer()
-                                        }
-                                        .padding()
-                                        .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0}.animation(.easeInOut(duration: 0.3))
-                                )
-                            }
-                        }
-                    }.onDisappear(perform: self.remiListVM.loadData)
-                    
-                )
-            }
+                                        }.onDisappear(perform: self.remiListVM.loadData)
+                )}
             
         }
         
@@ -234,74 +197,46 @@ struct ContentView_Previews: PreviewProvider {
 
 struct RemiCell: View {
     @ObservedObject var remiCellVM: RemiCellViewModel
-    
-    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
                 RoundedRectangle(cornerRadius: 15).fill(
                     Color(hex: "BF813C")
-                    //                    LinearGradient(gradient: Gradient(colors: [.pink, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                    //                    RadialGradient(gradient: Gradient(colors: [.white, .blue]), center: .center, startRadius: 0, endRadius: 150)
                 )
-                    .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.95)
-                    .overlay(
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text(self.remiCellVM.remi.remiDescription)
-                                        .bold()
-                                        .padding(.leading, 15)
-                                        .foregroundColor(.black)
-                                        .font(.body)
-                                    Spacer()
-                                    Text(String(self.remiCellVM.remi.count))
-                                        .bold()
-                                        .padding(.trailing, 10)
-                                        .foregroundColor(.black)
-                                        .font(.title)
-                                        .lineLimit(nil)
-                                        .multilineTextAlignment(.trailing)
-                                }
+                .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.95)
+                .overlay(
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text(self.remiCellVM.remi.remiDescription)
+                                    .bold()
+                                    .padding(.leading, 15)
+                                    .foregroundColor(.black)
+                                    .font(.body)
+                                Spacer()
+                                Text(String(self.remiCellVM.remi.count))
+                                    .bold()
+                                    .padding(.trailing, 10)
+                                    .foregroundColor(.black)
+                                    .font(.title)
+                                    .lineLimit(nil)
+                                    .multilineTextAlignment(.trailing)
                             }
                         }
+                    }
                 )
-                    .opacity(0.8)
-                
-                
-                
+                .opacity(0.8)
             }
         }
-        
-        //            VStack {
-        //                Image("Card")
-        //                    .renderingMode(.original)
-        //                    .overlay(
-        //                        HStack {
-        //                            Text(remiCellVM.remi.remiDescription)
-        //                                .padding(.leading, 0)
-        //                                .foregroundColor(.black)
-        //                            Text(String(remiCellVM.remi.count))
-        //                                .padding(.trailing, 10)
-        //                                .foregroundColor(.black)
-        //                    .font(.headline)
-        //                        }
-        //                )
-        //        }
     }
 }
 extension Publishers {
-    // 1.
     static var keyboardHeight: AnyPublisher<CGFloat, Never> {
-        // 2.
         let willShow = NotificationCenter.default.publisher(for: UIApplication.keyboardWillShowNotification)
             .map { $0.keyboardHeight }
-        
         let willHide = NotificationCenter.default.publisher(for: UIApplication.keyboardWillHideNotification)
             .map { _ in CGFloat(0) }
-        
-        // 3.
         return MergeMany(willShow, willHide)
             .eraseToAnyPublisher()
     }

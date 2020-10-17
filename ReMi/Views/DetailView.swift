@@ -21,25 +21,24 @@ struct DetailView: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15)
                                 .fill(Color(hex: "BF813C"))
-                                //                            .frame(width: geometry.size.width, height: geometry.size.height * 0.3)
                                 .opacity(0.8)
                             RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
                             VStack {
                                 TextField(self.remiCellVM.remi.remiDescription, text: self.$remiCellVM.remi.remiDescription)
-                                .font(Font.headline.weight(.bold))
-                                .font(.system(size:28))
-                                .foregroundColor(.black)
-                                .multilineTextAlignment(.center)
-                                .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.25)
+                                    .font(Font.headline.weight(.bold))
+                                    .font(.system(size:28))
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.25)
                                 
                                 Text("label_edit_hint".localized)
-                                .font(.footnote)
-                                .foregroundColor(.black)
+                                    .font(.footnote)
+                                    .foregroundColor(.black)
                                     .padding(.all)
                                     .opacity(0.6)
                             }
                         }.frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.3)
-                            .padding(.top, -55)
+                        .padding(.top, -55)
                         Text(String(self.remiCellVM.remi.count))
                             .bold()
                             .frame(width: geometry.size.width, height: 70)
@@ -60,23 +59,20 @@ struct DetailView: View {
                                         self.remiCellVM.remi.count = self.remiCellVM.remi.count + 1
                                         let impactMed = UIImpactFeedbackGenerator(style: .rigid)
                                         impactMed.impactOccurred()
-                                }
-                                .overlay(
-                                    ZStack {
-                                        Text("+").bold().font(.largeTitle)
-                                            .padding(.trailing, 100.0)
-                                        //                                        .padding(.top, 20)
-                                        Circle().stroke(Color.clear, lineWidth: 1)
-                                            .frame(width: 175, height: 205)
-                                            .padding(.trailing, 100.0)
-                                        //                                        .padding(.top, 20)
-                                        Circle().stroke(Color(hex: "01D700"), lineWidth: 5)
-                                            .frame(width: 180, height: 210)
-                                            .padding(.trailing, 100.0)
-                                        //                                        .padding(.top, 20)
                                     }
-                                    
-                                )
+                                    .overlay(
+                                        ZStack {
+                                            Text("+").bold().font(.largeTitle)
+                                                .padding(.trailing, 100.0)
+                                            Circle().stroke(Color.clear, lineWidth: 1)
+                                                .frame(width: 175, height: 205)
+                                                .padding(.trailing, 100.0)
+                                            Circle().stroke(Color(hex: "01D700"), lineWidth: 5)
+                                                .frame(width: 180, height: 210)
+                                                .padding(.trailing, 100.0)
+                                        }
+                                        
+                                    )
                                 
                             }
                             
@@ -97,24 +93,24 @@ struct DetailView: View {
                                             impactMedWarning.notificationOccurred(.warning)
                                         }
                                         
-
-                                }
-                                .overlay(
-                                    ZStack {
-                                        Text("-").bold().font(.largeTitle)
-                                            .padding(.leading, 190)
-                                            .padding(.top, -70)
-                                        Circle().stroke(Color.clear, lineWidth: 1)
-                                            .frame(width: 105, height: 120)
-                                            .padding(.leading, 190)
-                                            .padding(.top, -100)
-                                        Circle().stroke(Color(hex: "C20000"), lineWidth: 5)
-                                            .frame(width: 110, height: 120)
-                                            .padding(.leading, 190)
-                                            .padding(.top, -100)
+                                        
                                     }
-                                    
-                                )
+                                    .overlay(
+                                        ZStack {
+                                            Text("-").bold().font(.largeTitle)
+                                                .padding(.leading, 190)
+                                                .padding(.top, -70)
+                                            Circle().stroke(Color.clear, lineWidth: 1)
+                                                .frame(width: 105, height: 120)
+                                                .padding(.leading, 190)
+                                                .padding(.top, -100)
+                                            Circle().stroke(Color(hex: "C20000"), lineWidth: 5)
+                                                .frame(width: 110, height: 120)
+                                                .padding(.leading, 190)
+                                                .padding(.top, -100)
+                                        }
+                                        
+                                    )
                                 
                             }
                             ZStack {
@@ -127,39 +123,34 @@ struct DetailView: View {
                                         self.remiCellVM.remi.count = 0
                                         let impactMed = UIImpactFeedbackGenerator(style: .heavy)
                                         impactMed.impactOccurred()
-                                }
-                                .overlay(
-                                    ZStack {
-                                        Image(systemName: "arrow.counterclockwise")
-                                            .frame(width: 120, height: 120)
-                                            .font(.system(size: 30, weight: .bold))
-                                            .padding(.trailing, -30)
-                                            .padding(.top, -65)
-                                        Circle().stroke(Color.clear, lineWidth: 1)
-                                            .frame(width: 65, height: 120)
-                                            .padding(.trailing, -30)
-                                            .padding(.top, -60)
-                                        Circle().stroke(Color(hex: "4A4949"), lineWidth: 5)
-                                            .frame(width: 70, height: 120)
-                                            .padding(.trailing, -30)
-                                            .padding(.top, -60)
                                     }
-                                    
-                                )
+                                    .overlay(
+                                        ZStack {
+                                            Image(systemName: "arrow.counterclockwise")
+                                                .frame(width: 120, height: 120)
+                                                .font(.system(size: 30, weight: .bold))
+                                                .padding(.trailing, -30)
+                                                .padding(.top, -65)
+                                            Circle().stroke(Color.clear, lineWidth: 1)
+                                                .frame(width: 65, height: 120)
+                                                .padding(.trailing, -30)
+                                                .padding(.top, -60)
+                                            Circle().stroke(Color(hex: "4A4949"), lineWidth: 5)
+                                                .frame(width: 70, height: 120)
+                                                .padding(.trailing, -30)
+                                                .padding(.top, -60)
+                                        }
+                                        
+                                    )
                                 
                             }
                         }.frame(width: geometry.size.width, height: geometry.size.height * 0.5)
                     }
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.9)
-            )
+                )
             
         }
-//        .navigationBarItems(trailing:
-//            Button(action: {}) {
-//                Text("Edit")
-//            }
-//        )
-            .accentColor(.black)
+        .accentColor(.black)
         
     }
 }

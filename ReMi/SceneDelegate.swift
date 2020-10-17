@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let contentView = ContentView(remiCellVM: RemiCellViewModel(remi: Remi(remiDescription: "", count: 0)), addButtonColor: .gray)
+        let contentView = ContentView()
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

@@ -26,7 +26,7 @@ class RemiRepository: ObservableObject {
         
         db.collection("remis")
             .order(by: "createdTime")
-            .whereField("userID", isEqualTo: userId)
+            .whereField("userID", isEqualTo: userId as Any)
             .addSnapshotListener { (querySnapshot, error) in
                 if let querySnapshot = querySnapshot {
                     self.remis = querySnapshot.documents.compactMap { document in

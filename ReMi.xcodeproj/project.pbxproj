@@ -14,6 +14,7 @@
 		5327677F24B393D9003CE520 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327677E24B393D9003CE520 /* DetailView.swift */; };
 		5332213C24C8D26D0024854F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5332213B24C8D26D0024854F /* .gitignore */; };
 		53872A4224D8339300C8CD8C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53872A4424D8339300C8CD8C /* Localizable.strings */; };
+		53A7CC9D253B39B2008BFB7C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A7CC9C253B39B2008BFB7C /* MainView.swift */; };
 		53D3F94B24B3D69900687506 /* RemiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3F94A24B3D69900687506 /* RemiRepository.swift */; };
 		53FB958E24B3BF160048F056 /* RemiCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB958D24B3BF160048F056 /* RemiCellViewModel.swift */; };
 		53FB959024B3C05A0048F056 /* RemiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB958F24B3C05A0048F056 /* RemiListViewModel.swift */; };
@@ -61,6 +62,7 @@
 		53872A4524D8339F00C8CD8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		53872A4624D8339F00C8CD8C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		539A479424ED8B5A007EE1BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53A7CC9C253B39B2008BFB7C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		53D3F94A24B3D69900687506 /* RemiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiRepository.swift; sourceTree = "<group>"; };
 		53E6F70E24B630FF005EB4D1 /* ReMe..entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReMe..entitlements; sourceTree = "<group>"; };
 		53FB958D24B3BF160048F056 /* RemiCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiCellViewModel.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5327677E24B393D9003CE520 /* DetailView.swift */,
+				53A7CC9C253B39B2008BFB7C /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,12 +217,12 @@
 				53FEEEAD24B33BB4005FE17B /* AppDelegate.swift */,
 				53FEEEAF24B33BB4005FE17B /* SceneDelegate.swift */,
 				53FEEEB124B33BB4005FE17B /* ContentView.swift */,
+				5326210224B6786C007F591B /* SplashView.swift */,
 				53FEEEB824B33BB8005FE17B /* LaunchScreen.storyboard */,
 				5326210424B67E20007F591B /* Assets.xcassets */,
 				53FEEEBB24B33BB8005FE17B /* Info.plist */,
 				53FB959124B3D26B0048F056 /* GoogleService-Info.plist */,
 				53FEEEB524B33BB8005FE17B /* Preview Content */,
-				5326210224B6786C007F591B /* SplashView.swift */,
 				53872A3B24D830EE00C8CD8C /* Internationalization */,
 			);
 			path = ReMi;
@@ -498,6 +501,7 @@
 				53FEEEAE24B33BB4005FE17B /* AppDelegate.swift in Sources */,
 				53FB958E24B3BF160048F056 /* RemiCellViewModel.swift in Sources */,
 				53FB959024B3C05A0048F056 /* RemiListViewModel.swift in Sources */,
+				53A7CC9D253B39B2008BFB7C /* MainView.swift in Sources */,
 				53FEEEB024B33BB4005FE17B /* SceneDelegate.swift in Sources */,
 				53D3F94B24B3D69900687506 /* RemiRepository.swift in Sources */,
 				5327677A24B34F7E003CE520 /* Remi.swift in Sources */,

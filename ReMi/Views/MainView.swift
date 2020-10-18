@@ -22,6 +22,8 @@ struct MainView: View {
     let email = "cshdev.team@gmail.com"
     @State private var keyboardHeight: CGFloat = 0
     
+    let nsObject: AnyObject? = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as AnyObject
+    
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
@@ -50,12 +52,10 @@ struct MainView: View {
                             UITableView.appearance().separatorStyle = .none
                             UITableView.appearance().backgroundColor = .clear
                             UITableViewCell.appearance().backgroundColor = .clear
-                            //                                UITableView.appearance().allowsSelection = false
                             UITableViewCell.appearance().selectionStyle = .none
                         }
                         .edgesIgnoringSafeArea(.all)
                         .environment(\.defaultMinListRowHeight, 100)
-                        //            }
                         .navigationBarTitle("ReMee").foregroundColor(.black)
                         
                         Button(action: {self.presentInfo.toggle()}) {
@@ -93,6 +93,10 @@ struct MainView: View {
                                                     }
                                                 }
                                             }
+                                            Spacer()
+                                            Text("Version: \(nsObject as! String)")
+                                                .font(.system(size:11))
+                                                .foregroundColor(.black)
                                         }
                                         Spacer()
                                         VStack(alignment: .center) {

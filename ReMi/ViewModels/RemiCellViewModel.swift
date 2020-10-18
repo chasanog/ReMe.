@@ -24,17 +24,17 @@ class RemiCellViewModel: ObservableObject, Identifiable {
         $remi
             .compactMap { remi in
                 remi.id
-        }
-        .assign(to: \.id, on: self)
-        .store(in: &cancellables)
+            }
+            .assign(to: \.id, on: self)
+            .store(in: &cancellables)
         
         $remi
-        .dropFirst()
+            .dropFirst()
             .debounce(for: 0.8, scheduler: RunLoop.main)
             .sink { remi in
                 self.remiRepository.updateRemi(remi)
-        }
-    .store(in: &cancellables)
+            }
+            .store(in: &cancellables)
     }
     
 }

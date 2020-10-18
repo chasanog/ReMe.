@@ -25,23 +25,23 @@ class RemiRepository: ObservableObject {
         let userId = Auth.auth().currentUser?.uid
         
         db.collection("remis")
-        .order(by: "createdTime")
-        .whereField("userID", isEqualTo: userId)
+            .order(by: "createdTime")
+            .whereField("userID", isEqualTo: userId as Any)
             .addSnapshotListener { (querySnapshot, error) in
-            if let querySnapshot = querySnapshot {
-                self.remis = querySnapshot.documents.compactMap { document in
-                    do {
-                        let x = try document.data(as: Remi.self)
-                        return x
+                if let querySnapshot = querySnapshot {
+                    self.remis = querySnapshot.documents.compactMap { document in
+                        do {
+                            let x = try document.data(as: Remi.self)
+                            return x
+                        }
+                        catch {
+                            print(error)
+                        }
+                        return nil
+                        
                     }
-                    catch {
-                        print(error)
-                    }
-                    return nil
-                    
                 }
             }
-        }
     }
     
     func addRemi(_ remi: Remi) {
@@ -53,7 +53,7 @@ class RemiRepository: ObservableObject {
         catch {
             fatalError("Unable to encode remi: \(error.localizedDescription)")
         }
-
+        
     }
     
     func updateRemi(_ remi: Remi) {
@@ -66,7 +66,7 @@ class RemiRepository: ObservableObject {
             }
             
         }
-
+        
     }
     
     func deleteRemi(at offsets: IndexSet) {

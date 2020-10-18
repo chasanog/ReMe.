@@ -12,6 +12,7 @@ struct DetailView: View {
     @ObservedObject var remiCellVM: RemiCellViewModel
     @State var rmiDesc: String
     @State var opacity = 1.0
+  
     var body: some View {
         GeometryReader { geometry in
             LinearGradient(gradient: Gradient(colors: [Color(hex: "FFB812"), Color(hex: "79B3EE")]), startPoint: .bottom, endPoint: .top)
@@ -22,14 +23,31 @@ struct DetailView: View {
                             RoundedRectangle(cornerRadius: 15)
                                 .fill(Color(hex: "BF813C"))
                                 .opacity(0.8)
-                            RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3)
+                            RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 3).onAppear( perform: {
+                                if #available(iOS 14.0, *) {
+                                    UITextView.appearance().backgroundColor = .clear
+                                }
+                            })
                             VStack {
-                                TextField(self.remiCellVM.remi.remiDescription, text: self.$remiCellVM.remi.remiDescription)
-                                    .font(Font.headline.weight(.bold))
-                                    .font(.system(size:28))
-                                    .foregroundColor(.black)
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.25)
+                                if #available(iOS 14.0, *) {
+                                    ZStack {
+                                        TextEditor(text: self.$remiCellVM.remi.remiDescription)
+                                            .font(Font.headline.weight(.bold))
+                                            .font(.system(size:28))
+                                            .foregroundColor(.black)
+                                            .multilineTextAlignment(.center)
+                                            .background(Color.clear)
+                                            .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.25)
+                                        Text("Hello").opacity(0).padding(.all, 8)
+                                    }
+                                } else {
+                                    TextField(self.remiCellVM.remi.remiDescription, text: self.$remiCellVM.remi.remiDescription)
+                                        .font(Font.headline.weight(.bold))
+                                        .font(.system(size:28))
+                                        .foregroundColor(.black)
+                                        .multilineTextAlignment(.center)
+                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.25)
+                                }
                                 
                                 Text("label_edit_hint".localized)
                                     .font(.footnote)

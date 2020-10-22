@@ -8,12 +8,17 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
+//@available(iOS 14.0, *)
 class RemiListViewModel: ObservableObject {
     @Published var remiRepository = RemiRepository()
     @Published var remiCellViewModels = [RemiCellViewModel]()
     
     private var cancellables = Set<AnyCancellable>()
+    
+//    @AppStorage("remee", store: UserDefaults(suiteName: "group.com.CSHDev.ReMee"))
+//    var remeeData: Data = Data()
     
     init() {
         remiRepository.$remis.map { remis in
@@ -27,6 +32,9 @@ class RemiListViewModel: ObservableObject {
     
     func addRemi(remi: Remi) {
         remiRepository.addRemi(remi)
+//        guard let remeeData = try? JSONEncoder().encode(remi) else { return }
+//        self.remeeData = remeeData
+//        print("save \(remi)")
     }
     
     func deleteRemi(at offsets: IndexSet) {

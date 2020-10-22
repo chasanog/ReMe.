@@ -24,6 +24,7 @@ struct MainView: View {
     
     let nsObject: AnyObject? = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as AnyObject
     
+    
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
@@ -218,13 +219,14 @@ struct RemiCell: View {
                                     .padding(.leading, 15)
                                     .foregroundColor(.black)
                                     .font(.body)
+                                    .lineLimit(1)
                                 Spacer()
                                 Text(String(self.remiCellVM.remi.count))
                                     .bold()
                                     .padding(.trailing, 10)
                                     .foregroundColor(.black)
                                     .font(.title)
-                                    .lineLimit(nil)
+                                    .lineLimit(1)
                                     .multilineTextAlignment(.trailing)
                             }
                         }

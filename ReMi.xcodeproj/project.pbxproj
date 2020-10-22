@@ -15,6 +15,7 @@
 		5332213C24C8D26D0024854F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5332213B24C8D26D0024854F /* .gitignore */; };
 		53872A4224D8339300C8CD8C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53872A4424D8339300C8CD8C /* Localizable.strings */; };
 		53A7CC9D253B39B2008BFB7C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A7CC9C253B39B2008BFB7C /* MainView.swift */; };
+		53A7CE0B253CDC66008BFB7C /* AnyGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A7CE0A253CDC66008BFB7C /* AnyGestureRecognizer.swift */; };
 		53D3F94B24B3D69900687506 /* RemiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3F94A24B3D69900687506 /* RemiRepository.swift */; };
 		53FB958E24B3BF160048F056 /* RemiCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB958D24B3BF160048F056 /* RemiCellViewModel.swift */; };
 		53FB959024B3C05A0048F056 /* RemiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FB958F24B3C05A0048F056 /* RemiListViewModel.swift */; };
@@ -46,6 +47,19 @@
 			remoteInfo = ReMi;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53FC6DEA2541939E0094B967 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		296E7E38C1C38AB009702470 /* Pods-ReMiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMiTests.debug.xcconfig"; path = "Target Support Files/Pods-ReMiTests/Pods-ReMiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +150,8 @@
 				96AD0BCF4C8C9A7092E8A045 /* Pods_ReMi.framework */,
 				82B8E1C9050A6B9DEC5A675E /* Pods_ReMi_ReMiUITests.framework */,
 				86E0E039EB1A4A57EFF800A1 /* Pods_ReMiTests.framework */,
+				53FC6DDA2541939A0094B967 /* WidgetKit.framework */,
+				53FC6DDC2541939A0094B967 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,6 +179,14 @@
 				53872A4424D8339300C8CD8C /* Localizable.strings */,
 			);
 			path = Internationalization;
+			sourceTree = "<group>";
+		};
+		53A7CE09253CDC41008BFB7C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				53A7CE0A253CDC66008BFB7C /* AnyGestureRecognizer.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		53D3F94924B3D68A00687506 /* Repositories */ = {
@@ -214,6 +238,7 @@
 				53FB958C24B3BF050048F056 /* ViewModels */,
 				5327677D24B393C6003CE520 /* Views */,
 				5327677824B34F6C003CE520 /* Model */,
+				53A7CE09253CDC41008BFB7C /* Helper */,
 				53FEEEAD24B33BB4005FE17B /* AppDelegate.swift */,
 				53FEEEAF24B33BB4005FE17B /* SceneDelegate.swift */,
 				53FEEEB124B33BB4005FE17B /* ContentView.swift */,
@@ -321,7 +346,7 @@
 		53FEEEA224B33BB4005FE17B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Cihan Hasanoglu";
 				TargetAttributes = {
@@ -508,6 +533,7 @@
 				5327677F24B393D9003CE520 /* DetailView.swift in Sources */,
 				53FEEEB224B33BB4005FE17B /* ContentView.swift in Sources */,
 				5326210324B6786C007F591B /* SplashView.swift in Sources */,
+				53A7CE0B253CDC66008BFB7C /* AnyGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +712,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE4B751D566A05727580AECD /* Pods-ReMi.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ReMi/ReMe..entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -711,6 +738,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E237992973DEF5296EFFAFA /* Pods-ReMi.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ReMi/ReMe..entitlements;
 				CODE_SIGN_STYLE = Automatic;
